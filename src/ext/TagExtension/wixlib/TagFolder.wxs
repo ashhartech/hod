@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the Microsoft Reciprocal License. See LICENSE.TXT file in the project root for full license information. -->
+
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="WixTagInstallFolder">
+            <Directory Id="WixTagFolder" Name="swidtag" ComponentGuidGenerationSeed="4BAD0C8B-3AF0-BFE3-CC83-094749A1C4B1" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>
