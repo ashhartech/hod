@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the Microsoft Reciprocal License. See LICENSE.TXT file in the project root for full license information. -->
+
+
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <ItemGroup>
+    <ProjectReference Include="$(WixSrcFolder)\libs\libs.proj">
+      <BuildInParallel>false</BuildInParallel>
+    </ProjectReference>
+    <ProjectReference Include="$(WixSrcFolder)\burn\burn.proj">
+      <BuildInParallel>false</BuildInParallel>
+    </ProjectReference>
+    <ProjectReference Include="$(WixSrcFolder)\tools\tools.proj">
+      <BuildInParallel>false</BuildInParallel>
+    </ProjectReference>
+
+    <ProjectReference Include="src\Utilities\TestBA\TestBA.csproj" />
+    <ProjectReference Include="src\UnitTests\Burn\BurnUnitTest.vcxproj" />
+    <ProjectReference Include="src\UnitTests\dutil\DUtilUnitTest.vcxproj" />
+    <ProjectReference Include="src\IntegrationTests\Burn\BurnIntegrationTests.csproj" />
+    <ProjectReference Include="src\IntegrationTests\MsbuildIntegrationTests\MsbuildIntegrationTests.csproj" />
+    <ProjectReference Include="src\WixTests\WixTests.csproj" />
+    <ProjectReference Include="src\WixTestTools\WixTestTools.csproj" />
+  </ItemGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), wix.proj))\tools\Traversal.targets" />
+</Project>
